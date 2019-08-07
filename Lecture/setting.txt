@@ -1,0 +1,14 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+chromedriver = 'C:/Users\kkang/workspace/CRL/Lecture/chromedriver.exe'
+#driver = webdriver.Chrome(chromedriver) #Chromedriver
+#driver webdriver.PhantomJS(C:/Users\kkang/workspace/CRL/Lecture/phantomjs-2.1.1-windows/bin/phantomejs.exe)
+headless_options = webdriver.ChromeOptions() # headless
+headless_options.add_argument('headless')
+headless_options.add_argument('disable-gpu') #그래픽 카드 미사용
+headless_options.add_argument('window-size=1920x1080')
+headless_options.add_argument("lang=ko_KR")
+driver = webdriver.Chrome(chromedriver, options = headless_options) #Chromedriver
+
